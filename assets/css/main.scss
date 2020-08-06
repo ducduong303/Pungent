@@ -287,7 +287,16 @@ body {
     flex-wrap: $wrap;
     flex-direction: $dir;
 }
-
+@mixin load {
+    @keyframes load {
+        0%,100%{
+            transform: scale(0);
+        }
+        50%{
+            transform: scale(1);
+        }
+    }
+}
 
 /* 
     ===========================================================================
@@ -302,7 +311,6 @@ body {
     top: 0;
     left: 0;
     z-index: 9999;
-    opacity: 0;
     background-color: #18181b;
     @include flex(center,center);
     &.load-hidden{
@@ -319,24 +327,19 @@ body {
         width: 100%;
         height: 100%;
         position: absolute;
-        background: -webkit-gradient(linear, right bottom, left top, from(#ff2c9c), color-stop(#ff287b), color-stop(#ff395a), color-stop(#ff5137), to(#ff6a00));
-        background: linear-gradient(to left top, #ff2c9c, #ff287b, #ff395a, #ff5137, #ff6a00);
         border-radius: 50%;
         opacity: 0.6;
         animation: load 2s infinite ease-in-out;
-        @keyframes load {
-            0%,100%{
-                transform: scale(0);
-            }
-            50%{
-                transform: scale(1);
-            }
-        }
+        @include load();
+    }
+    &__one{
+        background: -webkit-gradient(linear, right bottom, left top, from(#ff2c9c), color-stop(#ff287b), color-stop(#ff395a), color-stop(#ff5137), to(#ff6a00));
+        background: linear-gradient(to left top, #ff2c9c, #ff287b, #ff395a, #ff5137, #ff6a00);
     }
     &__two{
+       background: #C4E538;
         animation-delay: -1s;
     }
-
 }
 /* 
     ===========================================================================
