@@ -302,6 +302,7 @@ body {
     top: 0;
     left: 0;
     z-index: 9999;
+    opacity: 0;
     background-color: #18181b;
     @include flex(center,center);
     &.load-hidden{
@@ -849,12 +850,9 @@ body {
         margin: 0 auto;
     }
     &__img{
-      display: flex;
-      justify-content: center;
-        img{
+            vertical-align: middle;
             max-width: 100%;
-            height: auto;
-        }
+            display: inline-block;
     }
     &__icon{
         &-item{
@@ -963,6 +961,7 @@ body {
         }
     }
     &__bg{
+        max-width: 100%;
         position: absolute;
         left: 0;
         right: 0;
@@ -1515,10 +1514,10 @@ body {
     .phone{
         overflow: hidden;
         padding-bottom: 95px;
+        &__process{
+        }
         &__img{
-            img{
-                max-width: 55%;
-            }
+            max-width: 55%;
         }
         &__icon{
             &-item{
@@ -1716,9 +1715,7 @@ body {
         overflow: hidden;
         padding-bottom: 95px;
         &__img{
-            img{
-                max-width: 50%;
-            }
+             max-width: 50%;
         }
         &__icon{
             &-item{
@@ -1736,7 +1733,7 @@ body {
                 }
                 &:nth-child(2){
                     left: auto;
-                    right: 0px;
+                    right: 15px;
                     top: -40px;
                 }
                 &:nth-child(3){
@@ -1771,6 +1768,11 @@ body {
                 font-size: 2rem;
             }
 
+        }
+        &__bg{
+            top: 0;
+            max-width: 100%;
+            opacity: .40
         }
     }
     .sologan{

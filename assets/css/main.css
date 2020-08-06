@@ -224,6 +224,7 @@ body {
   top: 0;
   left: 0;
   z-index: 9999;
+  opacity: 0;
   background-color: #18181b;
   display: flex;
   align-items: center;
@@ -696,11 +697,9 @@ body {
     max-width: 995px;
     margin: 0 auto; }
   .phone__img {
-    display: flex;
-    justify-content: center; }
-    .phone__img img {
-      max-width: 100%;
-      height: auto; }
+    vertical-align: middle;
+    max-width: 100%;
+    display: inline-block; }
   .phone__icon-item {
     position: absolute; }
     .phone__icon-item:nth-child(1) {
@@ -782,6 +781,7 @@ body {
       border-radius: 50%;
       opacity: .18; }
   .phone__bg {
+    max-width: 100%;
     position: absolute;
     left: 0;
     right: 0;
@@ -1191,7 +1191,7 @@ body {
   .phone {
     overflow: hidden;
     padding-bottom: 95px; }
-    .phone__img img {
+    .phone__img {
       max-width: 55%; }
     .phone__icon-item h3 {
       font-size: 1.6rem;
@@ -1316,7 +1316,7 @@ body {
   .phone {
     overflow: hidden;
     padding-bottom: 95px; }
-    .phone__img img {
+    .phone__img {
       max-width: 50%; }
     .phone__icon-item h3 {
       font-size: 1.3rem;
@@ -1329,7 +1329,7 @@ body {
       top: -40px; }
     .phone__icon-item:nth-child(2) {
       left: auto;
-      right: 0px;
+      right: 15px;
       top: -40px; }
     .phone__icon-item:nth-child(3) {
       right: 0;
@@ -1356,6 +1356,10 @@ body {
       height: 5.5rem;
       line-height: 6rem;
       font-size: 2rem; }
+    .phone__bg {
+      top: 0;
+      max-width: 100%;
+      opacity: 0.4; }
 
   .sologan__content {
     text-align: center; }
