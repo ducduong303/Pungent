@@ -346,7 +346,6 @@ body {
     z-index: 9999;
     background-color: #18181b;
     @include flex(center, center);
-
     &.load-hidden {
         opacity: 0;
         visibility: hidden;
